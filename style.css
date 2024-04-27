@@ -251,7 +251,7 @@ h2 span.main-text {
 /* laptop and smaller */
 @media (max-width: 990px) {
   section {
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
     align-items: start;
     justify-items: center;
   }
