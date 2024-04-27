@@ -17,7 +17,11 @@
 }
 
 nav.navbar {
-  background-color: rgba(1, 1, 1, 0.3) !important;
+  background-color: rgba(0, 16, 17, 0.8) !important;
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar.transparent {
+  background-color: transparent !important;
 }
 
 .nav-item .nav-link {
@@ -39,7 +43,11 @@ nav.navbar {
   outline: none;
 }
 
-section {
+section.normal {
+  padding-block: 2rem;
+}
+
+section:not(.normal) {
   width: 100%;
   min-height: 100vh;
   display: grid;
@@ -93,6 +101,7 @@ h2 span.main-text {
 
 .mission .col .inner-col {
   position: relative;
+  overflow: hidden;
 }
 
 .mission .col .inner-col img {
@@ -100,6 +109,11 @@ h2 span.main-text {
   aspect-ratio: 8/5;
   object-fit: cover;
   z-index: 1;
+  transition: all 0.4s;
+}
+
+.mission .col:hover .inner-col img {
+  transform: scale(104%);
 }
 
 .mission .col .inner-col::after {
@@ -113,21 +127,33 @@ h2 span.main-text {
     rgba(0, 0, 0, 0) 30%,
     rgba(0, 0, 0, 0.6) 100%
   );
+  transition: all 0.5s;
+}
+
+.mission .col:hover .inner-col::after {
+  opacity: 0;
 }
 
 .mission .col .inner-col h5 {
   position: absolute;
-  left: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 1rem;
+  width: 86%;
   z-index: 5;
   color: var(--text-white);
   font-weight: 500;
   font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.mission .col:hover .inner-col h5 {
+  opacity: 0;
 }
 
 .change .col iframe {
   width: 100%;
-  min-height: 400px;
+  min-height: 350px;
   object-fit: contain;
 }
 
@@ -151,6 +177,9 @@ h2 span.main-text {
 .extra-content {
   display: none;
 }
+/* .d0-images .col img {
+  width: 100%;
+} */
 
 /* UTILITY CLASS */
 .my-btn-primary {
@@ -179,6 +208,12 @@ h2 span.main-text {
 
 .color-primary-dark {
   color: var(--text-primary-dark);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .scroll-fade-right {
@@ -250,8 +285,8 @@ h2 span.main-text {
 
 /* laptop and smaller */
 @media (max-width: 990px) {
-  section {
-    padding: 2rem 0.5rem;
+  section:not(.normal) {
+    padding: 2rem 0.2rem;
     align-items: start;
     justify-items: center;
   }
