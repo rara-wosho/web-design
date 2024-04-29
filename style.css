@@ -181,6 +181,59 @@ h2 span.main-text {
   width: 100%;
 } */
 
+/* WHAT WE DO */
+.whatwedo-bg {
+  background-image: url("images/volunteer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  isolation: isolate;
+}
+
+.whatwedo-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 17, 17, 0.7);
+  z-index: -1;
+}
+
+.icon-row .col {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.icon-row .col .inner-col {
+  border: 1px solid rgb(214, 251, 255);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0.5rem 0.7rem;
+  width: 100%;
+  transition: all 0.3s;
+  position: relative;
+  isolation: isolate;
+}
+
+/* .icon-row .col:hover .inner-col {
+  border: 1xp solid rgb(0, 171, 156);
+  color: var(--text-primary);
+} */
+
+.icon-row .col .inner-col::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 255, 251, 0.264);
+  z-index: -1;
+  clip-path: circle(35% at 0% 0%);
+  transition: all 0.6s;
+}
+
+.icon-row .col:hover .inner-col::after {
+  clip-path: circle(100%);
+}
+
 /* UTILITY CLASS */
 .my-btn-primary {
   border: 0;
@@ -192,6 +245,10 @@ h2 span.main-text {
 
 .border-bottom-primary {
   border-bottom: var(--border) solid var(--text-primary-dark);
+}
+
+.border-left-primary {
+  border-left: var(--border) solid var(--text-primary-dark);
 }
 
 .ny-bg-primary {
