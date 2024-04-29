@@ -234,6 +234,35 @@ h2 span.main-text {
   clip-path: circle(100%);
 }
 
+/* ABOUT US */
+.about-us-bg {
+  background-image: url("images/aboutus-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  isolation: isolate;
+}
+
+.about-us-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 17, 17, 0.7);
+  z-index: -1;
+}
+
+/* FOOTER */
+.footer-icons a svg {
+  stroke: var(--text-primary-dark);
+}
+
+.footer-icons a {
+  border-radius: 100vw;
+  border: 1px solid var(--text-primary-dark);
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
 /* UTILITY CLASS */
 .my-btn-primary {
   border: 0;
