@@ -24,23 +24,22 @@ nav.navbar {
   background-color: transparent !important;
 }
 
-.nav-item .nav-link {
-  color: var(--text-white);
-  font-weight: normal !important;
-}
-
 .nav-item .nav-link.active {
-  color: var(--text-primary) !important;
-  border-bottom: 2px solid var(--text-primary);
+  color: var(--text-primary-dark) !important;
+  border-bottom: 2px solid var(--text-primary-dark);
 }
 
 .nav-link:hover {
-  color: var(--text-primary) !important;
+  color: var(--text-primary-dark) !important;
 }
 
 .navbar-toggler-icon {
   color: red;
   outline: none;
+}
+
+.offcanvas {
+  background: rgba(232, 255, 254, 0.878) !important;
 }
 
 section.normal {
@@ -296,7 +295,7 @@ h2 span.main-text {
 }
 
 .color-primary-dark {
-  color: var(--text-primary-dark);
+  color: var(--text-primary-dark) !important;
 }
 
 .grid-container {
@@ -369,6 +368,14 @@ h2 span.main-text {
     transform: translateX(0);
     opacity: 1;
     filter: blur(0);
+  }
+}
+
+/* laptop and bigger */
+@media (min-width: 992px) {
+  .nav-item .nav-link {
+    color: var(--text-white) !important;
+    font-weight: normal !important;
   }
 }
 
