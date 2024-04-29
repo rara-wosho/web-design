@@ -259,9 +259,12 @@ h2 span.main-text {
 
 .footer-icons a {
   border-radius: 100vw;
-  border: 1px solid var(--text-primary-dark);
   padding: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.footer-terms .col p {
+  font-size: 0.8rem;
 }
 /* UTILITY CLASS */
 .my-btn-primary {
